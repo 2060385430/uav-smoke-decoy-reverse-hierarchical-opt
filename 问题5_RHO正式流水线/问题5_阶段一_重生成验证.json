@@ -1,0 +1,234 @@
+{
+ "verify_time_s": 2.41,
+ "candidate_counts": {
+  "FY1_M1": 3,
+  "FY1_M2": 0,
+  "FY1_M3": 0,
+  "FY2_M1": 3,
+  "FY2_M2": 3,
+  "FY2_M3": 3,
+  "FY3_M1": 3,
+  "FY3_M2": 3,
+  "FY3_M3": 3,
+  "FY4_M1": 3,
+  "FY4_M2": 3,
+  "FY4_M3": 3,
+  "FY5_M1": 3,
+  "FY5_M2": 3,
+  "FY5_M3": 3
+ },
+ "n_keys": 15,
+ "n_nonempty": 13,
+ "total_candidates": 39,
+ "FY1_M2_empty": true,
+ "FY1_M3_empty": true,
+ "seeds_per_key": {
+  "FY1_M1": 4,
+  "FY1_M2": 20,
+  "FY1_M3": 20,
+  "FY2_M1": 8,
+  "FY2_M2": 4,
+  "FY2_M3": 8,
+  "FY3_M1": 8,
+  "FY3_M2": 4,
+  "FY3_M3": 8,
+  "FY4_M1": 8,
+  "FY4_M2": 8,
+  "FY4_M3": 20,
+  "FY5_M1": 4,
+  "FY5_M2": 8,
+  "FY5_M3": 8
+ },
+ "rescue_rounds_per_key": {
+  "FY1_M1": 0,
+  "FY1_M2": 4,
+  "FY1_M3": 4,
+  "FY2_M1": 1,
+  "FY2_M2": 0,
+  "FY2_M3": 1,
+  "FY3_M1": 1,
+  "FY3_M2": 0,
+  "FY3_M3": 1,
+  "FY4_M1": 1,
+  "FY4_M2": 1,
+  "FY4_M3": 4,
+  "FY5_M1": 0,
+  "FY5_M2": 1,
+  "FY5_M3": 1
+ },
+ "n_valid_assignments": 50,
+ "top8": [
+  {
+   "rank": 1,
+   "assignment": [
+    "M1",
+    "M1",
+    "M3",
+    "M2",
+    "M1"
+   ],
+   "screen_score": 19.918253,
+   "cand_map": {
+    "FY1": 0,
+    "FY2": 0,
+    "FY3": 0,
+    "FY4": 0,
+    "FY5": 0
+   }
+  },
+  {
+   "rank": 2,
+   "assignment": [
+    "M1",
+    "M2",
+    "M3",
+    "M2",
+    "M1"
+   ],
+   "screen_score": 19.82342,
+   "cand_map": {
+    "FY1": 0,
+    "FY2": 0,
+    "FY3": 0,
+    "FY4": 1,
+    "FY5": 0
+   }
+  },
+  {
+   "rank": 3,
+   "assignment": [
+    "M1",
+    "M1",
+    "M1",
+    "M2",
+    "M3"
+   ],
+   "screen_score": 19.749637,
+   "cand_map": {
+    "FY1": 0,
+    "FY2": 0,
+    "FY3": 0,
+    "FY4": 0,
+    "FY5": 0
+   }
+  },
+  {
+   "rank": 4,
+   "assignment": [
+    "M1",
+    "M1",
+    "M3",
+    "M2",
+    "M3"
+   ],
+   "screen_score": 19.706298,
+   "cand_map": {
+    "FY1": 0,
+    "FY2": 0,
+    "FY3": 0,
+    "FY4": 0,
+    "FY5": 0
+   }
+  },
+  {
+   "rank": 5,
+   "assignment": [
+    "M1",
+    "M2",
+    "M3",
+    "M1",
+    "M1"
+   ],
+   "screen_score": 19.69708,
+   "cand_map": {
+    "FY1": 0,
+    "FY2": 0,
+    "FY3": 0,
+    "FY4": 2,
+    "FY5": 0
+   }
+  },
+  {
+   "rank": 6,
+   "assignment": [
+    "M1",
+    "M2",
+    "M1",
+    "M1",
+    "M3"
+   ],
+   "screen_score": 19.672579,
+   "cand_map": {
+    "FY1": 0,
+    "FY2": 0,
+    "FY3": 0,
+    "FY4": 0,
+    "FY5": 0
+   }
+  },
+  {
+   "rank": 7,
+   "assignment": [
+    "M1",
+    "M3",
+    "M1",
+    "M2",
+    "M1"
+   ],
+   "screen_score": 19.656691,
+   "cand_map": {
+    "FY1": 0,
+    "FY2": 0,
+    "FY3": 0,
+    "FY4": 0,
+    "FY5": 0
+   }
+  },
+  {
+   "rank": 8,
+   "assignment": [
+    "M1",
+    "M2",
+    "M1",
+    "M2",
+    "M3"
+   ],
+   "screen_score": 19.654804,
+   "cand_map": {
+    "FY1": 0,
+    "FY2": 0,
+    "FY3": 0,
+    "FY4": 1,
+    "FY5": 0
+   }
+  }
+ ],
+ "champion_assignment": [
+  "M1",
+  "M2",
+  "M1",
+  "M1",
+  "M3"
+ ],
+ "champion_in_top8": true,
+ "champion_rank": 6,
+ "anchor_new": {
+  "assignment": [
+   "M1",
+   "M1",
+   "M3",
+   "M2",
+   "M1"
+  ],
+  "screen_score": 19.918253,
+  "fine_total": 19.918139445493104,
+  "per_missile": {
+   "M1": 13.422560986269112,
+   "M2": 3.675914312019085,
+   "M3": 2.8196641472049073
+  }
+ },
+ "anchor_old_fine": 20.459533,
+ "anchor_abs_diff": 0.5413935545068966,
+ "anchor_rel_diff_pct": 2.646
+}

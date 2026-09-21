@@ -1,0 +1,91 @@
+{
+ "meta": {
+  "script": "problem1_rerun_save.py",
+  "source_module": "问题1.py（导入复用，未修改原文件）",
+  "problem": "问题1 定参数遮蔽时长（FY1, v=120 m/s, 投放1.5s, 延迟3.6s）"
+ },
+ "main_result": {
+  "params": {
+   "num_per_circle": 300,
+   "coarse_step": 0.01,
+   "refine_tol": 1e-06
+  },
+  "duration_s": 1.391642456054658,
+  "intervals_s": [
+   [
+    8.056445627675718,
+    9.448088083730376
+   ]
+  ],
+  "n_sample_points": 600,
+  "expected_duration_s": 1.391642,
+  "expected_interval_s": [
+   8.056446,
+   9.448088
+  ],
+  "duration_matches_expected": true,
+  "interval_matches_expected": true,
+  "elapsed_s": 0.32,
+  "timestamp": "2026-09-15T15:28:17"
+ },
+ "sample_convergence": {
+  "params": {
+   "n_list": [
+    50,
+    100,
+    200,
+    300,
+    500
+   ],
+   "coarse_step": 0.005,
+   "refine_tol": 1e-06
+  },
+  "durations_s": {
+   "50": 1.391642456054658,
+   "100": 1.391642456054658,
+   "200": 1.391642456054658,
+   "300": 1.391642456054658,
+   "500": 1.391642456054658
+  },
+  "deviation_vs_N500_s": {
+   "50": 0.0,
+   "100": 0.0,
+   "200": 0.0,
+   "300": 0.0,
+   "500": 0.0
+  },
+  "max_abs_deviation_s": 0.0,
+  "elapsed_s": 2.4,
+  "timestamp": "2026-09-15T15:28:35"
+ },
+ "step_sensitivity": {
+  "params": {
+   "step_list": [
+    0.05,
+    0.02,
+    0.01,
+    0.005,
+    0.002
+   ],
+   "num_per_circle": 200,
+   "refine_tol": 1e-06
+  },
+  "durations_s": {
+   "0.05": 1.391642761230468,
+   "0.02": 1.391642456054658,
+   "0.01": 1.391642456054658,
+   "0.005": 1.391642456054658,
+   "0.002": 1.3916425781248485
+  },
+  "deviation_vs_dt0.002_s": {
+   "0.05": 1.8310561955559024e-07,
+   "0.02": -1.220701904003363e-07,
+   "0.01": -1.220701904003363e-07,
+   "0.005": -1.220701904003363e-07,
+   "0.002": 0.0
+  },
+  "max_abs_deviation_s": 1.8310561955559024e-07,
+  "elapsed_s": 1.79,
+  "timestamp": "2026-09-15T15:28:48"
+ }
+}
