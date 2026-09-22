@@ -1,21 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-问题1 重跑落盘脚本（不修改 问题1.py，仅导入复用其函数）
-
-功能：
-  1) 重算定参数遮蔽时长（N=300/圆周、dt=0.01、二分 tol=1e-6）
-     期望值：1.391642 s，区间 [8.056446, 9.448088]
-  2) 重跑采样收敛检验（N = 50, 100, 200, 300, 500）
-  3) 重跑步长敏感性检验（dt = 0.05, 0.02, 0.01, 0.005, 0.002，经二分精化）
-  全部结果写入 problem1_results.json（含运行时间戳与各环节耗时）。
-
-用法：
-  python problem1_rerun_save.py            # 全部环节
-  python problem1_rerun_save.py main       # 只跑定参数主计算
-  python problem1_rerun_save.py conv       # 只跑采样收敛检验
-  python problem1_rerun_save.py step       # 只跑步长敏感性检验
-脚本可重复运行：每次重算并覆盖对应环节的 JSON 字段，其它环节保留。
-"""
 import os
 import sys
 import json
