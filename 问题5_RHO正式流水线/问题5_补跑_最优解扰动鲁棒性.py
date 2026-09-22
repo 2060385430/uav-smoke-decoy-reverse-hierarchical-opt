@@ -1,20 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-问题5 最优解（A0 完整 RHO 冠军方案）联合高斯扰动鲁棒性补跑
-=================================================================
-基准解：ablation_results.json -> refines["M1,M2,M1,M1,M3"].x（40 维，fine 总遮蔽 22.717447 s）
-扰动方式：对 40 维每一维加 N(0, (p*|x_i|)^2) 的相对高斯扰动，随后截断到 BOUNDS_40
-扰动档：p ∈ {0.01, 0.03, 0.05}，每档 30 次重复（每档独立固定种子，可复现）
-评估精度：fine（每圆周 200 点、dt=0.005 s、二分 40 次），与 ablation_rho.eval_plan_fine 完全一致
-指标：
-  (a) 有效率     = 30 次中总遮蔽时长 > 0.01 s 的比例
-  (b) 平均保持率 = mean(T_扰动) / T0
-用法：python robustness_q5.py 0.01   （分档运行；结果增量写入 robustness_q5_results.json）
-
-说明：本脚本自包含——物理模型与评估函数逐行复制自同目录 ablation_rho.py
-（samples / shielded_scalar / interval_for / merge / decode / BOUNDS_40 / 物理常量），
-未改动原文件任何内容。
-"""
 import os, sys, json, time
 os.environ.setdefault("OMP_NUM_THREADS", "1")
 os.environ.setdefault("MKL_NUM_THREADS", "1")
