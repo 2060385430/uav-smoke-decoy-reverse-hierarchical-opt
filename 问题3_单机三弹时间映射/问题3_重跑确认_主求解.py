@@ -1,14 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-问题3 重跑确认：主求解（8维DE + 时间映射） + fine 验证 + 罚函数对照
-=====================================================================
-由 problem3_solver.py 复制精简而来（不改动原文件、不覆盖 result1.xlsx / problem3_intervals.png）：
-  - 保留：主求解 DE（seed=42，与原脚本完全相同的参数与启发式初始化）+ fine 高精度验证
-  - 保留：检验1「时间映射约束有效性」（强制间隔 g=1.0 s 边界的并集对照，纯评估、不重跑 DE）
-  - 删除：xlsx / png 落盘、边际效应分析、约束逐项验证等打印型检验
-  - 结果改存 problem3_rerun_main_results.json
-物理模型与评估函数逐行复制自 problem3_solver.py。
-"""
 import json
 from pathlib import Path
 import numpy as np
