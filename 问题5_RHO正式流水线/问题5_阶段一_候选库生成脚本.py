@@ -1,38 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-问题5 RHO 阶段一：候选库生成（论文 3.2 节）
-=============================================
-对 15 个独立 8 维单元子问题 (drone, missile) ∈ FY1..FY5 × M1..M3，
-固定该机仅干扰该弹，优化 3 枚烟幕弹的完整投放方案。
-
-决策向量 x = [θ, v, d1, g1, g2, t1, t2, t3]（8 维）
-  θ      航向角        [0, 2π]
-  v      速度          [70, 140]
-  d1     首次投放时刻  [0, 55]
-  g1,g2  间隔增量      [1, 10]   时间映射：投放时刻 = [d1, d1+g1, d1+g1+g2]，间隔≥1s 天然满足
-  t1..t3 起爆延迟      [0.1, det_max]  det_max = min(12, sqrt(2*(z0-2)/9.8))，由起爆高度决定
-（边界与消费端 ablation_rho.BOUNDS_40 对应分量逐一致）
-
-分段目标函数：
-  有遮蔽时  最大化 3 弹遮蔽区间并集长度（式14）→ 目标 = -并集长度
-  无遮蔽时  以距离引导项 D(x)（式15，有效时间窗内云团到各采样点视线的最大距离的最小值）
-            替代，D 越小越好 → 目标 = 100 + mean(D_i)
-  （口径复用 ablation_rho.interval_or_guidance / eval_global_med_guided 的既有实现）
-
-求解器：DE/rand/1/bin，SEEDS 个随机种子，每种子 G=35 代、NP=14，
-  缩放因子 F∈[0.5,1.5] 逐代抖动（mutation=(0.5,1.5) dither），CR=0.75。
-  scipy 的 popsize 是种群倍数，为精确实现 NP=14，初始种群以 14×8 数组显式传入
-  （init 为数组时 popsize 被忽略，种群规模恰为 14）。
-  规格偏差：基础 4 种子 × G=35 后候选不足 Top-3 的组合，以额外种子
-  （每轮 4 个、G=60，至多 RESCUE_ROUNDS 轮）补投，保证候选库覆盖。
-
-精度：优化阶段 coarse（每圆周 60 点、dt=0.25 s，仅作区间定位）；
-      候选以 medium（每圆周 120 点、dt=0.02 s、二分 35 次）复评。
-去重后每个组合保留 Top-3 候选。
-
-断点续跑：每完成一个 (drone, missile) 组合即追加写入 stage1_checkpoint.json，
-          重跑时跳过已完成组合；最终输出 candidate_lib_regen.pkl。
-"""
 import os, sys, json, time, pickle
 os.environ.setdefault("OMP_NUM_THREADS", "1")
 os.environ.setdefault("MKL_NUM_THREADS", "1")
