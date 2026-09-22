@@ -1,16 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-问题5 RHO 消融实验
-变体：
-  A0 完整 RHO（筛选Top-8 + 40维精修）
-  A1 去局部精修（仅 阶段一+二+三）
-  A2 去任务分配枚举（贪心分配 + 精修）
-  A3 去联合筛选（独立时长求和排序 + 精修Top-8）
-  A4 去分层（直接40维全局DE）
-  S  筛选宽度敏感性 Top-N ∈ {1,2,4,8}（复用A0精修结果）
-锚点：论文报告系统总遮蔽时长 20.46s（fine 精度）
-断点续跑：结果写入 ablation_results.json，已完成项自动跳过
-"""
 import os, sys, json, time, pickle
 os.environ.setdefault("OMP_NUM_THREADS", "1")
 os.environ.setdefault("MKL_NUM_THREADS", "1")
