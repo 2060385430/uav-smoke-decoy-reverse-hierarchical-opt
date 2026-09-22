@@ -1,18 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-验证论文"medium 与 fine 两级精度下总遮蔽时长差异仅 0.000191 s"的说法。
-
-做法：
-  1) 从 ablation_results.json 读冠军 40 维向量 refines["M1,M2,M1,M1,M3"].x
-     （其 fine_total = 22.717447 s）；
-  2) 复用 ablation_rho.py 的评估函数（decode / interval_for / merge /
-     E_MED / E_FINE），分别以 medium（120 点/圆周、dt=0.02、二分 35 次）
-     和 fine（200 点/圆周、dt=0.005、二分 40 次）评估同一向量；
-  3) 两值与差值写入 medium_fine_check.json。
-
-脚本可重复运行：每次重算并覆盖 medium_fine_check.json。
-不修改 ablation_rho.py 与 ablation_results.json。
-"""
 import os
 import json
 import time
