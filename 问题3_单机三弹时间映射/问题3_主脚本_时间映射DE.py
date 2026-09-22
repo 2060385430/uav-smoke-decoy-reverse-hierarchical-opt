@@ -1,11 +1,3 @@
-"""
-问题三：多烟幕弹投放策略优化（DE 差分进化版）
-方法：8维差分进化优化，目标=三弹遮蔽区间并集总长度最大化
-- 决策变量：航向角、速度、首弹投放时刻、投放间隔1、投放间隔2、三弹起爆延迟
-- 时间映射：t_drop2=t_drop1+gap1, t_drop3=t_drop2+gap2，自动满足间隔≥1s约束
-- 粗扫+二分法精化区间边界（精度1e-6s）
-- DE + 启发式初始化（含答案解） + L-BFGS-B 局部精化
-"""
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
