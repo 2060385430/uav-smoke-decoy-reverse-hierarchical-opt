@@ -1,23 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-导出问题5两套方案的逐弹明细 xlsx（补上 问题5_结果.xlsx 无生成代码的问题）。
-
-产物：
-  1) plan_anchor_20.46.xlsx   —— 候选库锚点方案（分配 M1,M2,M1,M1,M3、各机第 0 候选，
-     即消融 A1「未精修」方案，fine 总遮蔽 20.459533 s）。逐弹参数取自
-     ../candidate_lib.pkl；逐弹遮蔽区间用 ablation_rho.py 的 interval_for
-     以 fine 精度（200 点/圆周、dt=0.005、二分 40 次）现场重算，
-     与 best_plan_rho.csv 的口径一致。
-  2) plan_champion_22.717.xlsx —— RHO 冠军方案（ablation_results.json 中
-     refines["M1,M2,M1,M1,M3"].x，fine 总遮蔽 22.717447 s）。
-     逐弹数据直接由 best_plan_rho.csv 转写（该 csv 即冠军方案的 fine 明细）。
-
-两个文件列格式均参照 best_plan_rho.csv：
-  无人机,导弹,速度,航向角°,投放时刻,起爆延迟,起爆时刻,起爆X,起爆Y,起爆Z,遮蔽区间,时长
-另附「汇总」工作表：各导弹遮蔽并集时长与总计（含与 json 存档值的核对）。
-
-脚本可重复运行：每次重算并覆盖两个 xlsx。不修改任何既有文件。
-"""
 import os
 import csv
 import json
