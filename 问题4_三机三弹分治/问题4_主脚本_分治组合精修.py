@@ -1,12 +1,3 @@
-"""
-问题四：三机协同投放策略优化（DE 分治—组合—精修版）
-方法：
-  1. 分治：FY1/FY2/FY3 各做4维DE单弹优化，保留前K组候选（含区间缓存）
-  2. 组合：枚举K³组合，查缓存计算三弹区间并集，取并集最大
-  3. 精修：12维DE局部精修（fine采样，以最优组合为初始点）
-  4. 验证：fine采样（200点/圆周，dt=0.005）重新计算，与预置参数取优
-输出：result2.xlsx（题目要求问题4存 result2.xlsx）
-"""
 from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
