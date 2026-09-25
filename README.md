@@ -23,7 +23,22 @@ Then enter any problem folder and run its main script (filenames are self-descri
 | `问题5_RHO正式流水线/` | Problem 5: **full RHO pipeline** (Stage 1–5 + ablation) | 22.717447 s |
 | `问题5_早期探索与对比实验_非论文流水线/` | Early explorations & baselines — **not** part of the paper pipeline | — |
 
+## Supplementary experiments (added 2026-09-22, updated 2026-09-24)
+
+| Folder | Content | Headline result |
+|---|---|---|
+| `扩展模型与风场敏感性分析/` | Comment 1: extended cloud model (wind advection, Gaussian diffusion, time-varying settling) + 100-case sensitivity sweep + wind re-optimization | Worst-case retention 10.7 %; coverage-constrained re-optimization recovers 16.425 s (+196 %) |
+| `MINLP与全局最优性验证/` | Comment 2: MINLP view + answer-free global-optimality verification on Problems 2–3 | P2 within 0.13 % of independent reference; P3 solution remains best-known |
+| `蒙特卡洛鲁棒性实验/` | Comment 3: Monte-Carlo robustness under three error levels (N = 1000 each) | L1 expected duration 13.78 s; 95 % assured 8.26 s |
+| `与基准算法的公平对比实验/` | Comment 4: fair comparison vs DE / PSO / GA / CMA-ES / BO under a common protocol | None of 85 baseline runs reaches 22.717447 s; two-sided exact Wilcoxon p < 0.001 (BO: p = 0.0625, n.s.) |
+
 Naming convention: `主脚本_*` = runnable solver, `结果_*` = data output, `图_*` = figures, `补跑/重跑/验证/阶段一_*` = consistency & regeneration scripts.
+
+## Revision history
+
+- **2026-09-24 (paper v7, final figure layout)** — All paper figures unified to one macaron palette (Figs. 8–11 recolored via `make_figs_comment1.py` / `make_fig_comment4.py`; Figs. 1–7 already used it). Monte-Carlo Figs. 6+7 merged into a single four-panel Fig. 5 (`analyze_mc.py` additionally writes `图_合并_分布与成功率.png`); the joint-Gaussian robustness figure and the extended-cloud-model figure moved to Appendix B (Figs. B.1, B.2); remaining figures renumbered (baseline old Fig. 8 → Fig. 6, wind heatmap old Fig. 10 → Fig. 7, K/λ sensitivity old Fig. 11 → Fig. 8). TIFF outputs are now LZW-compressed. No experiment data was changed.
+- **2026-09-23 (paper v7)** — 实验4: Wilcoxon tests switched to **two-sided exact** (`scipy.stats.wilcoxon(..., alternative="two-sided", method="exact")`), summary table regenerated; 实验1: **coverage-constrained wind re-optimization** added (`run_wind_reopt_constrained.py`, best all-three-covered plan 16.425 s; the unconstrained 13.261 s plan leaves M3 uncovered); Figs. 8–11 regenerated, publication formats (SVG/TIFF) added. No raw experiment data was changed.
+- **2026-09-22** — Supplementary experiment folders 实验1–实验4 added.
 
 ## Reproducibility
 
