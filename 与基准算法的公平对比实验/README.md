@@ -1,6 +1,6 @@
 # 实验4 · 基线公平对比实验（2026-09-22 新增）
 
-> 补充实验 4（基线公平对比）的全部代码与数据，对应论文 v4 中新增的 **4.4 Comparison with Baseline Optimizers** 节（红色高亮：一段正文 + Table 3 + Fig. 8）。
+> 补充实验 4（基线公平对比）的全部代码与数据，对应论文 **4.4 Comparison with Baseline Optimizers** 节（正文 + Table 3 + Fig. 8）。
  > 结论：85 个基线 run 无一达到 RHO 的 22.717447 s；最强基线均值 GA 7.885 s（比 RHO 低 65.3%，即 RHO 领先 188%）；全部基线单次最好成绩 PSO 12.046 s，仍差 10.67 s；双侧 Wilcoxon 检验：DE/PSO/GA/CMA-ES p<0.001，BO p=0.0625 不显著（BO 仅 5 次运行）。RHO 完整流程另含离线候选库生成（约 3.16×10^5 NFE），论文中已与基线 16,000 NFE 口径分开报告。
 
 ## 统一实验口径
