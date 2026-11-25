@@ -1,0 +1,10 @@
+# Reproducibility requirements — RHO pipeline (Problems 1-5)
+# Verified environment: Windows 11, Python 3.12.14, AMD Ryzen 7 7840HS
+numpy==2.4.4
+scipy==1.18.1
+pandas==3.0.2
+matplotlib==3.10.9
+openpyxl==3.1.5
+# Supplementary experiments (实验1 sensitivity / 实验4 baseline comparison):
+cma==4.5.0          # CMA-ES baseline (实验4)
+scikit-learn==1.9.0 # Gaussian-process surrogate for Bayesian optimization (实验4)

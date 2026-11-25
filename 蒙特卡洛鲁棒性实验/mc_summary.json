@@ -1,0 +1,138 @@
+{
+ "T0_medium_s": 22.717528914671377,
+ "T0_fine_s": 22.71744735505382,
+ "levels": {
+  "L1": {
+   "n": 1000,
+   "valid_rate_P_T_gt_0.01s": 1.0,
+   "mean_s": 13.782,
+   "std_s": 3.3224,
+   "cv": 0.2411,
+   "min_s": 3.0356,
+   "max_s": 22.8456,
+   "keep_ratio_vs_T0": 0.6067,
+   "quantiles_s": {
+    "P1": 5.9284,
+    "P5": 8.2561,
+    "P10": 9.3894,
+    "P25": 11.4614,
+    "P50": 13.9801,
+    "P75": 15.9921,
+    "P95": 19.2108,
+    "P99": 20.7513
+   },
+   "guaranteed_duration_at_confidence": {
+    "90%": 9.3894,
+    "95%": 8.2561,
+    "99%": 5.9284
+   },
+   "per_missile_mean_s": {
+    "M1": 6.8804,
+    "M2": 4.7933,
+    "M3": 2.1083
+   },
+   "per_missile_valid_rate": {
+    "M1": 1.0,
+    "M2": 0.97,
+    "M3": 0.792
+   },
+   "gap_adjust_fraction": 0.0,
+   "wall_time_s": 365.5,
+   "fine_subset_check": {
+    "n": 100,
+    "mean_s": 13.7288,
+    "std_s": 3.3331,
+    "valid_rate": 1.0,
+    "mean_diff_vs_medium_s": -0.0532
+   }
+  },
+  "L2": {
+   "n": 1000,
+   "valid_rate_P_T_gt_0.01s": 0.992,
+   "mean_s": 8.4117,
+   "std_s": 3.5295,
+   "cv": 0.4196,
+   "min_s": 0.0,
+   "max_s": 20.6208,
+   "keep_ratio_vs_T0": 0.3703,
+   "quantiles_s": {
+    "P1": 0.6616,
+    "P5": 2.9083,
+    "P10": 4.027,
+    "P25": 5.9097,
+    "P50": 8.2863,
+    "P75": 10.7222,
+    "P95": 14.2963,
+    "P99": 16.7796
+   },
+   "guaranteed_duration_at_confidence": {
+    "90%": 4.027,
+    "95%": 2.9083,
+    "99%": 0.6616
+   },
+   "per_missile_mean_s": {
+    "M1": 4.4132,
+    "M2": 2.7721,
+    "M3": 1.2265
+   },
+   "per_missile_valid_rate": {
+    "M1": 0.957,
+    "M2": 0.757,
+    "M3": 0.481
+   },
+   "gap_adjust_fraction": 0.0006,
+   "wall_time_s": 360.6,
+   "fine_subset_check": {
+    "n": 100,
+    "mean_s": 8.3117,
+    "std_s": 3.6562,
+    "valid_rate": 0.99,
+    "mean_diff_vs_medium_s": -0.1001
+   }
+  },
+  "L3": {
+   "n": 1000,
+   "valid_rate_P_T_gt_0.01s": 0.887,
+   "mean_s": 4.2339,
+   "std_s": 3.0229,
+   "cv": 0.714,
+   "min_s": 0.0,
+   "max_s": 17.2001,
+   "keep_ratio_vs_T0": 0.1864,
+   "quantiles_s": {
+    "P1": 0.0,
+    "P5": 0.0,
+    "P10": 0.0,
+    "P25": 2.125,
+    "P50": 3.7006,
+    "P75": 6.1037,
+    "P95": 9.5426,
+    "P99": 12.5557
+   },
+   "guaranteed_duration_at_confidence": {
+    "90%": 0.0,
+    "95%": 0.0,
+    "99%": 0.0
+   },
+   "per_missile_mean_s": {
+    "M1": 2.2849,
+    "M2": 1.374,
+    "M3": 0.5751
+   },
+   "per_missile_valid_rate": {
+    "M1": 0.729,
+    "M2": 0.457,
+    "M3": 0.253
+   },
+   "gap_adjust_fraction": 0.0132,
+   "wall_time_s": 357.1,
+   "fine_subset_check": {
+    "n": 100,
+    "mean_s": 4.254,
+    "std_s": 3.3395,
+    "valid_rate": 0.84,
+    "mean_diff_vs_medium_s": 0.0201
+   }
+  }
+ }
+}
